@@ -1,0 +1,61 @@
+@charset 'utf-8';
+
+/* 웹 폰트 */
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+
+/* import normalize.css */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
+
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1em;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 본문 CSS */
+html, body {
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-size: 15px;
+}
+h1.title {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: steelblue;
+  color: #fff;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+h1.title span {
+  display: block;
+  text-align: center;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
