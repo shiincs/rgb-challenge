@@ -2,7 +2,7 @@
 
 /* 웹 폰트 */
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro');
 /* import normalize.css */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
 
@@ -42,7 +42,7 @@ table {
 
 /* 본문 CSS */
 html, body {
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-family: 'Montserrat', 'Avenir', sans-serif;
   font-size: 15px;
   background-color: #232323;
   color: #fff;
@@ -69,15 +69,17 @@ h1.title span {
 .score-area {
   margin-top: 1rem;
   text-align: center;
+  font-size: 1.3rem;
 }
 .game {
   text-align: center;
   position: relative;
   top: 30%;
 }
-.game h3 {
+.game .color-text {
   font-size: 1.7rem;
   font-weight: 400;
+  font-family: 'Source Code Pro', monospace;
   margin-bottom: 50px;
 }
 .game ul {
