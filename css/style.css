@@ -35,258 +35,142 @@ footer, header, hgroup, menu, nav, section, main {
 ul {
 	list-style: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+/* 본문 CSS */
+html, body {
+  font-family: 'Montserrat', 'Avenir', sans-serif;
+  font-size: 15px;
+  background-color: #232323;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* line 3, ../scss/_activators.scss */
-body.good .overlay {
-  display: block; }
-  /* line 5, ../scss/_activators.scss */
-  body.good .overlay .correct {
-    display: block; }
-/* line 11, ../scss/_activators.scss */
-body.bad .overlay {
-  display: block; }
-  /* line 13, ../scss/_activators.scss */
-  body.bad .overlay .wrong {
-    display: block; }
-
-/* line 2, ../scss/_wrapper.scss */
-.wrapper {
+/* 제목 영역 CSS */
+h1.title {
   text-align: center;
-  overflow: hidden;
-  z-index: 5;
-  background-color: #232323;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: -webkit-transform 0.45s ease;
-  -ms-transition: -ms-transform 0.45s ease;
-  -o-transition: -o-transform 0.45s ease;
-  -transition: -transform 0.45s ease;
-  transition: transform 0.45s ease; }
-  /* line 9, ../scss/_wrapper.scss */
-  .wrapper h1 {
-    width: 100%;
-    text-transform: uppercase;
-    line-height: 1.1;
-    padding: 20px 0;
-    background-color: steelblue; }
-    /* line 15, ../scss/_wrapper.scss */
-    .wrapper h1 span {
-      font-size: 300%; }
-  /* line 20, ../scss/_wrapper.scss */
-  .wrapper .game {
-    display: block;
-    height: calc(100% - 190px);
-    position: relative;
-    z-index: 5; }
-    /* line 25, ../scss/_wrapper.scss */
-    .wrapper .game p {
-      margin-top: 10px; }
-    /* line 29, ../scss/_wrapper.scss */
-    .wrapper .game div {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      display: block; }
-    /* line 33, ../scss/_wrapper.scss */
-    .wrapper .game h3 {
-      font-size: 150%;
-      margin-bottom: 50px;
-      font-family: 'Source Code Pro'; }
-    /* line 40, ../scss/_wrapper.scss */
-    .wrapper .game ul li {
-      display: block;
-      width: 50px;
-      height: 50px;
-      background-color: #232323;
-      display: inline-block;
-      border-radius: 50px;
-      margin-right: 20px;
-      box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 1px rgba(0, 0, 0, 0.1), 0px 3px 4px 4px rgba(0, 0, 0, 0.06);
-      -webkit-transition: all 0.45s ease;
-      -ms-transition: all 0.45s ease;
-      -o-transition: all 0.45s ease;
-      -transition: all 0.45s ease;
-      transition: all 0.45s ease; }
-      /* line 54, ../scss/_wrapper.scss */
-      .wrapper .game ul li:hover {
-        cursor: pointer; }
-      /* line 57, ../scss/_wrapper.scss */
-      .wrapper .game ul li:active {
-        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3), 0px 4px 6px 3px rgba(0, 0, 0, 0.1), 0px 6px 9px 7px rgba(0, 0, 0, 0.06);
-        -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        -o-transform: scale(0.9);
-        -transform: scale(0.9);
-        transform: scale(0.9); }
-      /* line 65, ../scss/_wrapper.scss */
-      .wrapper .game ul li:last-of-type {
-        margin-right: 0; }
-      /* line 68, ../scss/_wrapper.scss */
-      .wrapper .game ul li.show {
-        -webkit-transform: scale(46);
-        -ms-transform: scale(46);
-        -o-transform: scale(46);
-        -transform: scale(46);
-        transform: scale(46);
-        -webkit-transition: -webkit-transform 0.65s ease;
-        -ms-transition: -ms-transform 0.65s ease;
-        -o-transition: -o-transform 0.65s ease;
-        -transition: -transform 0.65s ease;
-        transition: transform 0.65s ease; }
-        @media all and (max-width: 640px) {
-          /* line 68, ../scss/_wrapper.scss */
-          .wrapper .game ul li.show {
-            -webkit-transform: scale(40);
-            -ms-transform: scale(40);
-            -o-transform: scale(40);
-            -transform: scale(40);
-            transform: scale(40); } }
-        @media all and (min-width: 1500px) {
-          /* line 68, ../scss/_wrapper.scss */
-          .wrapper .game ul li.show {
-            -webkit-transform: scale(70);
-            -ms-transform: scale(70);
-            -o-transform: scale(70);
-            -transform: scale(70);
-            transform: scale(70); } }
+  text-transform: uppercase;
+  background-color: steelblue;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+h1.title span {
+  display: block;
+  text-align: center;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
 
-/* line 92, ../scss/_wrapper.scss */
+/* 게임 영역 CSS */
+.score-area {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.game {
+  text-align: center;
+  position: relative;
+}
+.game .color-text {
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 50px;
+}
+.game .question-area{
+  margin-top: 130px;
+}
+.game .answers {
+  display: flex;
+  justify-content: center;
+}
+.game .answers .option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 20px;
+  border-color: #fff;
+  -webkit-transition: all 0.45s ease;
+  -ms-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
+  -transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+.game .answers .option:last-child {
+  margin-right: 0;
+}
+.option.show {
+  -webkit-transform: scale(46);
+  -ms-transform: scale(46);
+  -o-transform: scale(46);
+  -transform: scale(46);
+  transform: scale(46);
+  -webkit-transition: -webkit-transform 0.65s ease;
+  -ms-transition: -ms-transform 0.65s ease;
+  -o-transition: -o-transform 0.65s ease;
+  -transition: -transform 0.65s ease;
+  transition: transform 0.65s ease;
+}
+
+/* 결과 영역 CSS */
 .overlay {
   display: none;
+}
+.overlay.show {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9; }
-  /* line 96, ../scss/_wrapper.scss */
-  .overlay .correct, .overlay .wrong {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    display: none;
-    text-align: center;
-    font-size: 300%;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 800;
-    line-height: 1.2;
-    -webkit-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1);
-    /* older webkit */
-    -webkit-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    -moz-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    -o-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    /* custom */
-    -webkit-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1);
-    /* older webkit */
-    -webkit-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    -moz-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    -o-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
-    /* custom */ }
-    /* line 118, ../scss/_wrapper.scss */
-    .overlay .correct p, .overlay .wrong p {
-      font-size: 17pt; }
-    /* line 121, ../scss/_wrapper.scss */
-    .overlay .correct .button, .overlay .wrong .button {
-      margin: 10px 10px 0px;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-      border: 2px solid white;
-      border-radius: 5px;
-      padding: 7px;
-      font-size: 13pt;
-      background-color: transparent; }
-      /* line 129, ../scss/_wrapper.scss */
-      .overlay .correct .button.first, .overlay .wrong .button.first {
-        margin-top: 50px; }
-      /* line 132, ../scss/_wrapper.scss */
-      .overlay .correct .button:active, .overlay .wrong .button:active {
-        background-color: white;
-        color: #444; }
-
-
-/* line 1, ../scss/_buttons.scss */
-.button, button {
+  z-index: 100;
+}
+.button {
   display: inline-block;
-  vertical-align: top;
-  padding: 9px 13px;
-  margin: 0px 10px 10px 0;
-  background-color: steelblue;
-  color: white;
+  margin: 30px 0;
+  border: 2px solid #fff;
   border-radius: 5px;
-  border: 1px solid #3f75a2;
-  text-align: center;
-  font-weight: 700;
-  font-size: 100%;
-  text-decoration: none;
+  padding: 10px 5px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: transparent;
   cursor: pointer;
-  -webkit-appearance: none; }
-  /* line 20, ../scss/_buttons.scss */
-  .button:active, button:active {
-    background-color: #3f75a2;
-    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.3); }
-  /* line 24, ../scss/_buttons.scss */
-  .button.fb, button.fb {
-    background-color: #2d4486;
-    border: none;
-    font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
-    margin: 0 auto;
-    display: block;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
-    /* line 31, ../scss/_buttons.scss */
-    .button.fb:active, .button.fb:hover, button.fb:active, button.fb:hover {
-      background-color: #131d3a; }
-
-/* line 18, ../scss/style.scss */
-body {
-  color: white;
-  font-family: 'Montserrat', 'Avenir', sans-serif;
-  font-size: 13pt;
-  line-height: 1.5;
-  font-weight: 400;
-  position: fixed;
-  -webkit-perspective: 2000px;
-  perspective: 2000px;
-  background-color: #232323;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; 
+  outline: none;
+}
+.correct, 
+.wrong {
+  display: none;
+}
+.correct.show, 
+.wrong.show {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 4.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  -webkit-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
+  -moz-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
+  -o-transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
+  transition: all 500ms cubic-bezier(0.16, 0.935, 0.31, 1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
+  -moz-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
+  -o-transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
+  transition-timing-function: cubic-bezier(0.16, 0.935, 0.31, 1.2);
 }
 
-/* line 32, ../scss/style.scss */
-.harvey {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-/* line 38, ../scss/style.scss */
-.hide {
-  display: none; }
-
-/* line 42, ../scss/style.scss */
-.transform3d {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+.wrong.show .score-area-in-modal {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
