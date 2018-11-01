@@ -7,37 +7,41 @@
   <title>RGB Challenge</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="">
+<body>
+  <!-- overlay area -->
   <div class="overlay">
     <div class="correct">
       Thats Right!<br>
-      <a class="button first">Next color</a>
+      <button class="button">Next color</button>
     </div>
     <div class="wrong">
       Too bad :( <br>
-      <p>SCORE: <span>0</span></p><br>
-      <a class="button first">Play again</a><br>
+      <p class="score-area-in-modal">SCORE: <span class="score-in-modal">0</span></p>
+      <button class="button">Play again</button>
     </div>
   </div>
+
+  <!-- content area -->
   <div class="wrapper">
-    <div class="harvey"></div>
-    <h1>
+    <h1 class="title">
       The great<br>
-      <span>RGB</span><br>
+      <span>RGB</span>
       guessing challenge
     </h1>
     <div class="game">
-      <p>SCORE: <span>0</span></p>
-      <div>
-        <h3>rgb(</h3>
+      <p class="score-area">SCORE: <span class="score">0</span></p>
+      <div class="question-area">
+        <h3 class="color-text"></h3>
         <ul class="answers">
-          <li></li>
-          <li></li>
-          <li></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option"></li>
         </ul>
       </div>
     </div>
   </div>
 
+  <!-- IMPORT JS -->
+  <script src="./js/index.js"></script>
 </body>
 </html>
